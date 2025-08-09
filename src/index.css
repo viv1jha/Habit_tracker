@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #000;
+  --color-brand-600: #000;
+  --color-background: white;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-black antialiased;
+}
+
+.dark body {
+  @apply bg-black text-white;
+}
+
+.dark .rounded-xl,
+.dark .rounded-md,
+.dark .rounded-lg {
+  @apply border-white/20;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium shadow-sm transition-colors bg-black text-white hover:opacity-80;
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium shadow-sm transition-colors border border-black/20 bg-white hover:bg-black/5 text-black;
+}
+
+.dark .btn-outline {
+  @apply border-white/30 bg-black hover:bg-white/10 text-white;
+}
